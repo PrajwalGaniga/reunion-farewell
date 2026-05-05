@@ -3,14 +3,13 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC8tjAr54dQZr0xM9nupbxgtY54ge06QMQ",
-  authDomain: "reunion-uploads.firebaseapp.com",
-  projectId: "reunion-uploads",
-  storageBucket: "reunion-uploads.firebasestorage.app",
-  messagingSenderId: "364610835999",
-  appId: "1:364610835999:web:a24ceef866715a68f1272a",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
-console.log("🔥 Using HARDCODED Firebase config — test build");
 
 
 // ── DIAGNOSTIC (safe to push — no full secrets exposed) ──────────────────────
